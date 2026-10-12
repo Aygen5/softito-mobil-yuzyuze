@@ -1,5 +1,5 @@
 // Soyutlama Abstarction Kavramı
-
+/*
 // 1. Adım (sözleşmeler) Contract
 
 abstract class AuthRepository{
@@ -104,4 +104,22 @@ void save (T item){
 }
 
 T? getById(String id)=> _storage[id];
+}
+*/
+
+import 'dart:async';
+
+void main() {
+  print("1.Senkron başladı");
+  scheduleMicrotask(() {
+    print("2.Task Oluştu(Vip Kuyruk)");
+  });
+  Future(() {
+    print("3.Standart Event Kuyruğu");
+  });
+  Future.microtask(() {
+    print("4.Future.microtast çalıştı");
+  });
+
+  print("5.Senkron kod tamamlandı");
 }
